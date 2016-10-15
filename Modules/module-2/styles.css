@@ -1,0 +1,36 @@
+	header {
+		font-size: 1.5em;
+		background-color: #ffa;
+		text-align: center;
+	}
+	section{
+		font-family: tahoma;	
+	}
+	footer {
+		text-align: center;
+		background-color: #ffa;
+	}
+@media (max-width: 480px) {
+  body {
+    color: red;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 765px) {
+  body {
+    color: green;
+  }
+}
+
+@media (min-width: 766px) and (max-width: 991px) {
+  body {
+    color: blue;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    color: orange;
+  }
+}
