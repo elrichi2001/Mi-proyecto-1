@@ -1,0 +1,20 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let ride of rides" 
+        (click)="onSelect(ride)"
+    >
+        <span>{{ride.id}}</span> {{ride.name}} 
+    </li>
+</ul>
+
+<div *ngIf="selected">
+<hr />
+    <label>Name: </label><br />
+    <input [(ngModel)]="selected.name" placeholder="Nombre"><br />
+    <label>Description: </label><br />
+    <textarea [(ngModel)]="selected.description" placeholder="Descripcion"></textarea><br />
+    <label>Total: </label><br />
+    <input [(ngModel)]="selected.price" placeholder="precio"><br />
+    <label>Units: </label><br />
+    <input [(ngModel)]="selected.units" placeholder="Unidades"><br />
+</div>

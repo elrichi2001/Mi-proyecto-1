@@ -40,6 +40,8 @@ class Student implements Person{
 	}
 }
 
+
+
 var student = new Student();
 
 student.setAge(55);
