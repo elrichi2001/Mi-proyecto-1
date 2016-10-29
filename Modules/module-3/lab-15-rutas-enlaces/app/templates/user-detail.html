@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+<div *ngIf="user">
+    <hr />
+    <label>Name: </label><br />
+    <input [(ngModel)]="user.name" placeholder="name"><br />
+    <label>Addrees: </label><br />
+    <textarea [(ngModel)]="user.adress" placeholder="description"></textarea><br />
+    <label>Phone: </label><br />
+    <input [(ngModel)]="user.phone" placeholder="tipo"><br />
+</div>
