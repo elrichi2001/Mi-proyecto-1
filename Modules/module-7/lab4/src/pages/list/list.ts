@@ -27,5 +27,4 @@ export class ListPage {
 
   products: Products[] =;
   xxxxxxxxxxxxx
-
 }
