@@ -17,7 +17,7 @@ var user_component_1 = require("../component/user.component");
 var routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },
-    { path: 'products', component: product_list_component_1.ProductsComponent },
+    { path: 'products', component: product_list_component_1.ProductsListComponent },
     { path: 'product/detail/:id', component: product_detail_component_1.ProductDetailComponent },
     { path: 'users', component: user_component_1.UserComponent },
 ];

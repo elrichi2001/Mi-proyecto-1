@@ -17,12 +17,6 @@ var ProductDetailComponent = (function () {
         this.route = route;
     }
     ProductDetailComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.route.params.forEach(function (params) {
-            var id = +params['id'];
-            _this.productService.getProduct(id)
-                .then(function (product) { return _this.product = product; });
-        });
     };
     ProductDetailComponent = __decorate([
         core_1.Component({

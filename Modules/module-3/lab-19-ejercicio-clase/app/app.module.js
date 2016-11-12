@@ -34,7 +34,7 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 product_detail_component_1.ProductDetailComponent,
-                product_list_component_1.ProductsComponent,
+                product_list_component_1.ProductsListComponent,
                 home_component_1.HomeComponent,
                 user_component_1.UserComponent,
             ],

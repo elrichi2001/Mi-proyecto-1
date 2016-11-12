@@ -5,8 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent }   from './component/app.component';
 import { ProductDetailComponent } from './component/product-detail.component';
 import {AppRoutingModule} from "./routing/app-routing.module";
+import {HttpModule} from "@angular/http";
+import {InMemoryWebApiModule} from "angular2-in-memory-web-api";
+import {InMemoryProductService} from "./mock/in-memory-product.service";
 //import {AboutComponent} from "./component/about.component";
-import {ProductsComponent} from "./component/product-list.component";
+import {ProductsListComponent} from "./component/product-list.component";
 import {HomeComponent} from "./component/home.component";
 import {APP_BASE_HREF} from "@angular/common";
 import {UserComponent} from "./component/user.component";
@@ -22,7 +25,7 @@ import {UserComponent} from "./component/user.component";
   declarations: [
       AppComponent,
       ProductDetailComponent,
-      ProductsComponent,
+      ProductsListComponent,
       HomeComponent,
       UserComponent,
       //SalesInvoiceComponent,

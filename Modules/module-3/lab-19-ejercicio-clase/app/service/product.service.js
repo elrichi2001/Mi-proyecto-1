@@ -9,20 +9,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var product_mock_1 = require("../mock/product-mock");
+var http_1 = require("@angular/http");
+require('rxjs/add/operator/map');
+var Rx_1 = require('rxjs/Rx');
 var ProductService = (function () {
-    function ProductService() {
+    function ProductService(http) {
+        this.http = http;
+        this.productsURI = 'http://localhost:3000/api/products';
+        this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     ProductService.prototype.getProducts = function () {
-        return Promise.resolve(product_mock_1.PRODUCTS);
+        return this.http.get(this.productsURI)
+            .map(function (response) { return response.json().data; })
+            .catch(this.handleError);
     };
-    ProductService.prototype.getProduct = function (id) {
-        return this.getProducts()
-            .then(function (products) { return products.find(function (product) { return product.id === id; }); });
+    ProductService.prototype.update = function (product) {
+        var url = this.productsURI + "/" + product.id;
+        return this.http
+            .put(url, JSON.stringify(product), { headers: this.headers })
+            .map(function () { return product; })
+            .catch(this.handleError);
+    };
+    ProductService.prototype.create = function (name) {
+        return this.http
+            .post(this.productsURI, JSON.stringify({ name: name }), { headers: this.headers })
+            .map(function (res) { return res.json().data; })
+            .catch(this.handleError);
+    };
+    ProductService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        return Rx_1.Observable.throw(error.message || error);
     };
     ProductService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], ProductService);
     return ProductService;
 }());

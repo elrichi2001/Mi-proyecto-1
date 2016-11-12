@@ -11,34 +11,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var product_service_1 = require("../service/product.service");
 var router_1 = require("@angular/router");
-var ProductsComponent = (function () {
-    function ProductsComponent(router, productService) {
+require('rxjs/add/operator/map');
+var ProductsListComponent = (function () {
+    function ProductsListComponent(router, productService) {
         this.router = router;
         this.productService = productService;
         this.title = "los productos del Año";
     }
-    ProductsComponent.prototype.getProducts = function () {
+    ProductsListComponent.prototype.getProducts = function () {
         var _this = this;
-        this.productService.getProducts().then(function (products) { return _this.products = products; });
+        this.productService.getProducts()
+            .subscribe(function (products) {
+            _this.products = products;
+        }, function (error) {
+            console.log(error);
+        });
     };
-    ProductsComponent.prototype.ngOnInit = function () {
+    ProductsListComponent.prototype.ngOnInit = function () {
         this.getProducts();
     };
-    ProductsComponent.prototype.onSelect = function (product) {
+    ProductsListComponent.prototype.onSelect = function (product) {
         this.selected = product;
     };
-    ProductsComponent.prototype.gotoDetail = function () {
+    ProductsListComponent.prototype.gotoDetail = function () {
         this.router.navigate(['product/detail/', this.selected.id]);
     };
-    ProductsComponent = __decorate([
+    ProductsListComponent = __decorate([
         core_1.Component({
             selector: 'product-list-app',
             templateUrl: 'app/templates/product-list.html',
             providers: [product_service_1.ProductService]
         }), 
         __metadata('design:paramtypes', [router_1.Router, product_service_1.ProductService])
-    ], ProductsComponent);
-    return ProductsComponent;
+    ], ProductsListComponent);
+    return ProductsListComponent;
 }());
-exports.ProductsComponent = ProductsComponent;
+exports.ProductsListComponent = ProductsListComponent;
 //# sourceMappingURL=product-list.component.js.map

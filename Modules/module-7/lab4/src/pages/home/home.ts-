@@ -1,0 +1,28 @@
+import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
+export class HomePage {
+
+  constructor(public navCtrl: NavController) {
+    
+  }
+
+  const PRODUCTS: Product[] = [
+    {
+        id: 1,
+        name: "Samsung galaxy 8",
+        description: "telefono que explota",
+        type: "smartphone",
+        price: 1500000,
+        quantity: 20
+    }
+];
+
+products: Product[] = PRODUCTS;
+
+}

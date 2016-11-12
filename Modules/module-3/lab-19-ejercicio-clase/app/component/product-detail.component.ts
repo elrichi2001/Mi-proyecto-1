@@ -18,11 +18,7 @@ export class ProductDetailComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.route.params.forEach((params: Params) => {
-            let id = +params['id'];
-            this.productService.getProduct(id)
-                .then(product => this.product = product);
-        });
+        
     }
 }
 
