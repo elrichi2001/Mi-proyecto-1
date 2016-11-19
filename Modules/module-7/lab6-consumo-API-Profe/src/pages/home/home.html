@@ -7,5 +7,8 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>{{product.id}}</h2> {{product.name | uppercase }} 
+  <h3>Select the next option:</h3>
+  <p>
+    <button ion-button color="light" (click)="loadList()">Load List</button>
+  </p>
 </ion-content>

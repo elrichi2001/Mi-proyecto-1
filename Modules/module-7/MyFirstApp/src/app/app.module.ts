@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
+import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    HelloIonicPage,
+    ItemDetailsPage,
     ListPage
   ],
   imports: [
@@ -16,7 +18,8 @@ import { ListPage } from '../pages/list/list';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    HelloIonicPage,
+    ItemDetailsPage,
     ListPage
   ],
   providers: []
