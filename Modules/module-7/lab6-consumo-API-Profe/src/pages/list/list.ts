@@ -27,13 +27,8 @@ export class ListPage {
 
 	ionViewDidLoad() {
 	console.log('Hello ListPage Page');
-	this.getProducts();
+	//this.getProducts();
 	}
-/*
-	getProducts() {
-	    this.productService.getProducts().then(products => this.products = products);
-	}
-*/
 	
 	getProducts() {
         this.productService.getProducts()
@@ -45,6 +40,10 @@ export class ListPage {
                 console.log(error);
             }
         );
+    }
+
+    ngOnInit():void{
+      this.getProducts();
     }
 	
   
