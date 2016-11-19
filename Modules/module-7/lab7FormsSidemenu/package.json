@@ -29,19 +29,13 @@
     "typescript": "2.0.6"
   },
   "cordovaPlugins": [
-    "cordova-plugin-whitelist",
-    "cordova-plugin-console",
-    "cordova-plugin-statusbar",
-    "cordova-plugin-device",
+    "ionic-plugin-keyboard",
     "cordova-plugin-splashscreen",
-    "ionic-plugin-keyboard"
+    "cordova-plugin-device",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist"
   ],
-  "cordovaPlatforms": [
-    {
-      "platform": "android",
-      "version": "",
-      "locator": "android"
-    }
-  ],
-  "description": "lab5: An Ionic project"
+  "cordovaPlatforms": [],
+  "description": "lab7FormsSidemenu: An Ionic project"
 }

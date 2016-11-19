@@ -31,17 +31,11 @@
   "cordovaPlugins": [
     "cordova-plugin-whitelist",
     "cordova-plugin-console",
-    "cordova-plugin-statusbar",
     "cordova-plugin-device",
-    "cordova-plugin-splashscreen",
-    "ionic-plugin-keyboard"
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard",
+    "cordova-plugin-splashscreen"
   ],
-  "cordovaPlatforms": [
-    {
-      "platform": "android",
-      "version": "",
-      "locator": "android"
-    }
-  ],
-  "description": "lab5: An Ionic project"
+  "cordovaPlatforms": [],
+  "description": "lab8_SideMenu_ProducsUsers: An Ionic project"
 }
