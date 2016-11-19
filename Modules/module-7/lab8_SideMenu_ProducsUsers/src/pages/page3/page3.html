@@ -3,26 +3,26 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Product List</ion-title>
+    <ion-title>User List</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list no-border>
       <ion-list-header>
-        Productos
+        Usuarios
       </ion-list-header>
 
-      <ion-item *ngFor="let product of products">
+      <ion-item *ngFor="let user of users">
         <ion-icon name='planet' item-left></ion-icon>
-        {{product.name}}
+        {{user.firstname}}
         <ion-note item-right>
-        {{product.id}}
+        {{user.id}}
         </ion-note>
     </ion-item>
 
     </ion-list>
-  <div *ngIf="selectedItem" padding>
+  <<div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>
   </div>
 </ion-content>
