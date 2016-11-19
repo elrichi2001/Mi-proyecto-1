@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Product List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-border>
+      <ion-list-header>
+        Productos
+      </ion-list-header>
+
+      <ion-item *ngFor="let product of products">
+        <ion-icon name='planet' item-left></ion-icon>
+        {{product.name}}
+        <ion-note item-right>
+        {{product.id}}
+        </ion-note>
+    </ion-item>
+
+    </ion-list>
+</ion-content>
