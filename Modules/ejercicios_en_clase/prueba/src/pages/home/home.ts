@@ -31,8 +31,8 @@ export class HomePage {
   	Geolocation.getCurrentPosition({enableHighAccuracy: true, maximumAge: 3000, timeout: 5000}).then(position=>{
   		//let lati = position.coords.latitude;
   		//let longi = position.coords.longitude;
-  		console.log('Latitud:', position.coords.latitude.toString());
-  		console.log('Longitud:', position.coords.longitude.toString());
+  		//console.log('Latitud:', position.coords.latitude.toString());
+  		//console.log('Longitud:', position.coords.longitude.toString());
   		//Dialogs.alert('Long:' + position.coords.longitude + 'lat:' + position.coords.latitude, 'Coordenadas', 'OK');
   		Dialogs.alert('Esta es una alerta', 'Alert!', 'Entendido');
   	})
